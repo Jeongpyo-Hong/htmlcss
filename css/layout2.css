@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "예쁜폰트";
+  src: url("../font//NanumSquareR.woff");
+}
+
+@font-face {
+  font-family: "예쁜폰트B";
+  font-weight: 800;
+  src: url("../font//NanumSquareB.woff");
+}
+
+body,
+button,
+div,
+p,
+input,
+textarea {
+  margin: 0;
+  box-sizing: border-box;
+  transform: rotate(0.03deg);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-background {
+  width: 500px;
+  height: 300px;
+  background-image: url("../img/beach.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  /* background-attachment: fixed;
+  filter: brightness(100%) saturate(150%); */
+  padding: 10px 40px;
+  position: relative;
+  color: white;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: rgb(211, 138, 138);
+  color: white;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.flex-container .menu-box span {
+  margin-left: 10px;
+}
+
+.mob-container {
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.mob-container i {
+  background-color: burlywood;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.mob-container div p:first-child {
+  font-weight: 800;
+}
+
+.mob-container div p:last-child {
+  color: #4e4e4e;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.shop-bg {
+  background-color: #eee;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.shop-container {
+  display: flex;
+}
+
+.shop-item {
+  width: 33%;
+  padding: 10px;
+}
+
+.shop-item .overlay-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.shop-item .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 30px;
+  margin-top: 100%;
+  transition: all 1s;
+  padding: 20px;
+}
+
+.shop-item .overlay-wrap:hover .overlay {
+  margin-top: 50%;
+}
+
+.shop-item img {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.content {
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.go-btn {
+  position: absolute;
+  background: none;
+  color: black;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  border: none;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 80px;
+  background-color: black;
+  color: white;
+  width: 100px;
+  border-radius: 10px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.sub-box {
+  background-color: white;
+  width: 40%;
+  max-width: 400px;
+  height: 120px;
+  padding: 20px;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+  box-shadow: 0 0 5px 1px gray;
+  border-radius: 10px;
+}
+
+.sub-box p {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+form {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+form .contact-title {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+form p {
+  font-size: 20px;
+}
+
+form input[type="text"],
+textarea {
+  border: 1px solid lightgrey;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+form textarea {
+  height: 150px;
+}
+
+form .name-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+}
+
+form .name-box > div {
+  width: 100%;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 기본 체크박스 숨기기 */
+.checkbox input[type="checkbox"] {
+  display: none;
+}
+
+/* 선택되지 않은 체크박스 스타일 꾸미기 */
+.on {
+  width: 20px;
+  height: 20px;
+  background: gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+}
+
+/* 선택된 체크박스 스타일 꾸미기 */
+.checkbox input[type="checkbox"]:checked + .on {
+  background: rgb(255, 196, 0);
+}
+.on:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.checkbox input[type="checkbox"]:checked + .on:after {
+  display: block;
+}
+.on:after {
+  width: 6px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 6px;
+  top: 2px;
+}
+
+.contact-bottom-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-bottom-box button {
+  padding: 10px 40px;
+  background-color: rgb(255, 196, 0);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+/* 태블릿 */
+@media screen and (max-width: 1200px) {
+  .mob-container {
+    height: fit-content;
+    padding: 20px 0;
+    row-gap: 24px;
+  }
+  .mob-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+}
+
+/* 모바일 */
+@media screen and (max-width: 768px) {
+  .mob-container div {
+    width: 100%;
+  }
+  form .name-box {
+    display: block;
+  }
+}

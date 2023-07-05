@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-size: 12px;
+}
+
+div,
+p,
+input,
+textarea,
+button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+tr {
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+}
+
+thead tr {
+  height: 30px;
+  font-weight: 800;
+  color: gray;
+}
+
+thead td {
+  letter-spacing: 4px;
+}
+
+thead td.table-long {
+  width: 700px;
+}
+
+tbody tr:last-child {
+  border: none;
+}
+
+tbody td {
+  color: rgb(105, 131, 189);
+}
+
+tbody td:last-child {
+  font-weight: 800;
+  color: rgb(18, 64, 163);
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  background-color: #b0d9ec;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: rgb(12, 60, 114);
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  text-align: left;
+}
+
+.info-box img {
+  margin-left: 10px;
+  width: 100px;
+  height: 100%;
+}
+
+.info-box .brand {
+  font-size: 16px;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 4px;
+}
+
+.total-price {
+  text-align: right;
+  padding-right: 16px;
+  font-size: 16px;
+}
+
+.bottom-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-box p {
+  color: rgb(12, 60, 114);
+  text-decoration: underline;
+}
+
+.bottom-box button {
+  background-color: rgb(12, 60, 114);
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+}
