@@ -291,7 +291,7 @@ div {
 }
 
 .do-box .flex-wrap > div > p.sub-text {
-  top: 40%;
+  top: 35%;
 }
 
 .do-box .flex-wrap > div img {
@@ -313,7 +313,7 @@ footer .icon-wrap {
 }
 
 footer .icon-wrap i {
-  padding: 15px;
+  padding: 10px;
   background-color: #4f63c1;
   border-radius: 50%;
 }
@@ -358,5 +358,9 @@ footer p {
 
   .do-box .flex-wrap > div {
     width: 100%;
+  }
+
+  .do-box .flex-wrap > div > p.sub-text {
+    top: 30%;
   }
 }
