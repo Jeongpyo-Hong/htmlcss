@@ -10,7 +10,8 @@
 
 .box-green {
   @extend %box;
-  background-color: green;
+  // 다른 파일에 있는 변수를 사용할 때는 '파일명.변수명'
+  background-color: reset.$main-color;
 }
 .box-red {
   @extend %box;
@@ -34,4 +35,90 @@ h3 {
 }
 h4 {
   @include font-style(10px);
+}
+
+li {
+  width: 300px;
+  height: 50px;
+  padding-left: 10px;
+  background-color: antiquewhite;
+  margin-bottom: 10px;
+  line-height: 46px;
+
+  &.active {
+    background-color: rgb(116, 124, 194);
+  }
+
+  &:hover {
+    background-color: aqua;
+  }
+}
+
+@mixin alert($bgColor, $fontColor) {
+  width: 600px;
+  height: 50px;
+  line-height: 46px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  background-color: $bgColor;
+  color: $fontColor;
+
+  p {
+    font-weight: 800;
+  }
+}
+
+.alert-box-green {
+  @include alert(rgb(191, 236, 191), rgb(25, 82, 25));
+}
+.alert-box-blue {
+  @include alert(rgb(191, 208, 245), rgb(23, 53, 119));
+}
+.alert-box-yellow {
+  @include alert(rgb(255, 255, 206), rgb(136, 136, 12));
+}
+
+@mixin layout($width) {
+  width: $width;
+  height: 50px;
+  background-color: aqua;
+  margin-bottom: 10px;
+  text-align: center;
+  border-right: 1px solid gray;
+}
+
+@mixin mediaMd($width) {
+  @media screen and (max-width: 768px) {
+    @include layout($width);
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+
+  .col-6 {
+    @include layout(50%);
+  }
+  .col-4 {
+    @include layout(33.3%);
+  }
+  .col-2 {
+    @include layout(16.6%);
+  }
+  .col-md-8 {
+    @include mediaMd(65%);
+  }
+  .col-md-6 {
+    @include mediaMd(50%);
+  }
+  .col-md-4 {
+    @include mediaMd(33.3%);
+  }
+  .col-md-2 {
+    @include mediaMd(16.6%);
+  }
 }
