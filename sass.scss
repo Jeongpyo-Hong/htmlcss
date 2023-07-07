@@ -1,0 +1,37 @@
+// reste.scss에 있는 코드를 그대로 가져옴
+@use "reset";
+
+// %(임시클래스)는 단독으로 사용 시 컴파일 되지 않음
+%box {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+.box-green {
+  @extend %box;
+  background-color: green;
+}
+.box-red {
+  @extend %box;
+  background-color: red;
+}
+.box-blue {
+  @extend %box;
+  background-color: blue;
+}
+
+@mixin font-style($fs) {
+  font-size: $fs;
+  letter-spacing: -1px;
+}
+
+h2 {
+  @include font-style(30px);
+}
+h3 {
+  @include font-style(20px);
+}
+h4 {
+  @include font-style(10px);
+}
