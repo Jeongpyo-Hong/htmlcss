@@ -1,0 +1,37 @@
+.flip-outer {
+  width: 300px;
+  height: 300px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 1s;
+  /* 처음에 뒷면 안 보이게 동작 */
+  transform-style: preserve-3d;
+}
+
+.flip-inner:hover {
+  transform: rotateY(180deg);
+}
+
+.front {
+  width: 100%;
+  position: absolute;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 50px;
+  background-color: yellow;
+  text-align: center;
+  position: absolute;
+  /* 글씨 미리 뒤집기 */
+  transform: rotateY(180deg);
+  /* 처음에 뒷면 hidden */
+  backface-visibility: hidden;
+}
