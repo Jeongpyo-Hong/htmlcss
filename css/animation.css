@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+div {
+  box-sizing: border-box;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.ani-text {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ani-text:hover {
+  animation-name: text;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes text {
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.ani-button {
+  width: 100px;
+  height: 50px;
+  background-color: aqua;
+  margin: 0 auto;
+}
+
+.ani-button:hover {
+  animation-name: button;
+  animation-duration: 1s;
+}
+
+@keyframes button {
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.ani-plus {
+  margin: auto;
+  width: 84px;
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.ani-plus:hover {
+  animation-name: plus;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes plus {
+  25% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(45deg) scale(1.5);
+  }
+}
+
+.tab {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 180px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  transition: all 1s;
+}
+
+.tab .menu {
+  text-align: right;
+}
+
+.tab .item {
+  text-align: left;
+}
+
+.tab:hover {
+  transform: translateX(100px);
+}
+
+.tab:hover .menu {
+  text-align: center;
+}
+
+.tab:hover .item {
+  animation-name: tab-item;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  text-align: center;
+}
+
+@keyframes tab-item {
+  50% {
+    transform: skew(-20deg) translateX(20px);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
