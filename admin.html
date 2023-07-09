@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e53238af8a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="cont">
+      <div class="side">
+        <div>
+          <i class="fa-solid fa-house"></i>
+          <span>Home</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-headphones-simple"></i>
+          <span>Services</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-flag"></i>
+          <span>Alerts</span>
+        </div>
+        <div>
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Stats</span>
+        </div>
+      </div>
+      <div class="inner-container">
+        <div class="nav-box">
+          <div class="search-wrap">
+            <input type="text" placeholder="Search" class="search-input" />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+          <div class="info-wrap">
+            <span class="info-icon">
+              <span>5</span>
+              <i class="fa-solid fa-bell"></i>
+            </span>
+            <span class="info-icon">
+              <span>9</span>
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <span>Dev H</span>
+          </div>
+          <div class="hamb"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <div class="article">
+          <div class="title">Dashboard</div>
+          <div class="card-box">
+            <div class="card-blue">
+              <div class="text">
+                <div class="earnings">Earnings (Monthly)</div>
+                <div class="price">$400,000</div>
+              </div>
+              <div><i class="fa-solid fa-calendar"></i></div>
+            </div>
+            <div class="card-green">
+              <div class="text">
+                <div class="earnings">Earnings (Annual)</div>
+                <div class="price">$400,000</div>
+              </div>
+              <div><i class="fa-solid fa-dollar-sign"></i></div>
+            </div>
+            <div class="card-navy">
+              <div class="text">
+                <div class="earnings">Tasks</div>
+                <div class="price">13</div>
+              </div>
+              <div><i class="fa-solid fa-list-check"></i></div>
+            </div>
+            <div class="card-yellow">
+              <div class="text">
+                <div class="earnings">Requests</div>
+                <div class="price">26</div>
+              </div>
+              <div><i class="fa-regular fa-comments"></i></div>
+            </div>
+          </div>
+          <div class="chart-and-task">
+            <div class="chart-box">
+              <div>Earnings Overview</div>
+              <div class="chart">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="task-box">
+              <div>Tasks</div>
+              <p>Borrowed Items</p>
+              <p>Trello requests</p>
+              <p>Marked Comments</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [
+          {
+            label: "Monthly",
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: "#bbbceb",
+            borderColor: "#494bb3",
+            borderWidth: 1,
+            fill: true,
+            tension: 0.3,
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+  </script>
+</html>
